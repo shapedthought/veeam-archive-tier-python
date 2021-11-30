@@ -30,7 +30,7 @@ def archive_cal(data: List) -> None:
     change_rate_modifier = data['change_rate_modifier']
     # Each Archive Tier GFS retention point contains 512 capacity tier blocks. 
     # Existing Archive Tier blocks will only be re-used if all 512 contiguous blocks are in the latest RP
-    gfs_increase = 2 # set figure, further research needed
+    gfs_increase = 2
 
     # End of variables 
 

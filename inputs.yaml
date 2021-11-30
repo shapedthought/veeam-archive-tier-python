@@ -1,16 +1,16 @@
-source_cap : 50
-change_rate : 0.05
-growth : 0.1
-scope : 3
-comp : 0.5
-months : 5
-tier_after : 4
-read_fee : 0.00042
-retrieve_fee : 0
-storage_fee : 0.0018
-write_fee : 0.06
-block_size : 1 # MB
-compute_cost : 0.22 # VM
-throughput : 100 # VM Throughput in MBps
-min_retention : 3 # months
-change_rate_modifier : 5
+source_cap: 50
+change_rate: 0.05
+growth: 0.1
+scope: 3
+comp: 0.5
+months: 5
+tier_after: 4
+read_fee: 0.00042
+retrieve_fee: 0
+storage_fee: 0.0018
+write_fee: 0.06
+block_size: 1 # MB
+compute_cost: 0.22 # VM
+throughput: 100 # VM Throughput in MBps
+min_retention: 6 # months
+change_rate_modifier: 5
