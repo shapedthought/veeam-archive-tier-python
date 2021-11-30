@@ -30,7 +30,7 @@ def archive_cal(data: List) -> None:
     change_rate_modifier = data['change_rate_modifier']
     # Each Archive Tier GFS retention point contains 512 capacity tier blocks. 
     # Existing Archive Tier blocks will only be re-used if all 512 contiguous blocks are in the latest RP
-    gfs_increase = data['gfs_increase']
+    gfs_increase = 2 # set figure, further research needed
 
     # End of variables 
 
@@ -74,13 +74,9 @@ def archive_cal(data: List) -> None:
     # Loop through each month to prorate growth
     for i in range(scope_months):
         if i >= tier_after + 1:
-            if growth_prorate == 0:
-                current_cap = source_compress
-                current_cap_inc = (current_cap * (change_rate * change_rate_modifier)) * gfs_increase
-            else:
-                current_growth = growth_prorate * tier_month
-                current_cap = source_compress + ( source_compress * current_growth)
-                current_cap_inc = (current_cap * (change_rate * change_rate_modifier)) * gfs_increase
+            # does a check in case the growth is set to zero
+            current_cap = source_compress if growth_prorate == 0 else source_compress + ( source_compress * (growth_prorate * tier_month))
+            current_cap_inc = (current_cap * (change_rate * change_rate_modifier)) * gfs_increase
             tier_month += 1
 
         if i == tier_after + 1:

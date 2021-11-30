@@ -14,4 +14,3 @@ compute_cost : 0.22 # VM
 throughput : 100 # VM Throughput in MBps
 min_retention : 3 # months
 change_rate_modifier : 5
-gfs_increase : 1.5

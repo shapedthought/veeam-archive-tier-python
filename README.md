@@ -31,7 +31,6 @@ The parameters can be found in the inputs.yaml file. The variables are as follow
 | throughput | This is the estimated throughput of the VM in MBps | - |
 | min_retention | This is the minimum retention of the cloud provider's Archive Tier | Usually set to either 3 or 6 months |
 | change_rate_modifier | This is additional monthly overhead for monthly GFS | Changing is not recommended |
-| gfs_increase | This is an additional overhead due the block translation | Changing is not recommended |
 
 
 The script will produce a table and graph with the results. 
