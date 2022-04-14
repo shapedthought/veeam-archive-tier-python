@@ -23,7 +23,8 @@ The parameters can be found in the inputs.yaml file. The variables are as follow
 | comp | The compression factor | Usually 50%, higher value equals less data stored |
 | months | The quantity of months in the policy | - |
 | tier_after | When tiering to Archive should happen (month) | - |
-| read_fee | The cost of reading data out of the source Object Storage | - |
+| read_fee | The cost of reading data out of the source Object Storage | set to units of 1000 transactions |
+| write_fee | The cost of writeing the data into the target Object storage | set to units of 1000 transactions |
 | retrieve_fee | This is an additional cost getting the data associated with some cloud providers | - |
 | storage_fee | This is the cost of the Archive tier of storage per-GB per-month | For example S3 IA see https://aws.amazon.com/s3/pricing/ - Requests and Retrievals |
 | block_size | This is the source block size in MB | Usually 1MB, but can be 4 or 8MB. This can result in higher performance and capacity tier usage |
